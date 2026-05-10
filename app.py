@@ -7,7 +7,7 @@ import gdown
 import os
 
 if not os.path.exists("regression.pkl"):
-    url = "https://drive.google.com/uc?id=1DPU-dhfvyGIbGYIf7JdyCMVBGEr0wZwW"
+    url = "https://drive.google.com/uc?id=1-To1JzuKGBg6irUJwym_-FD1HD5PPlon"
     gdown.download(url, "regression.pkl", quiet=False)
 
 # ---------- Page config ----------
