@@ -3,12 +3,20 @@ import joblib
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import gdown
 import os
+import gdown
 
-if not os.path.exists("regression.pkl"):
-    url = "https://drive.google.com/uc?id=1-To1JzuKGBg6irUJwym_-FD1HD5PPlon"
-    gdown.download(url, "regression.pkl", quiet=False)
+file_id = "1-To1JzuKGBg6irUJwym_-FD1HD5PPlon"
+
+url = f"https://drive.google.com/uc?id={file_id}"
+
+if not os.path.exists("regression_model.pkl"):
+    gdown.download(
+        url,
+        "regression_model.pkl",
+        quiet=False,
+        fuzzy=True
+    )
 
 # ---------- Page config ----------
 st.set_page_config(page_title="Real Estate Advisor", layout="wide")
