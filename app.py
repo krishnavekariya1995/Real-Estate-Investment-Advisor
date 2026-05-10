@@ -16,6 +16,15 @@ if not os.path.exists("regression_model.pkl"):
         "regression_model.pkl",
         quiet=False
     )
+ # feature columns file
+feature_file_id = "1MKriR1bQ7eW9mZklqMAlLSMyx4-v6w7U"
+
+if not os.path.exists("feature_columns.pkl"):
+    gdown.download(
+        f"https://drive.google.com/uc?id={feature_file_id}",
+        "feature_columns.pkl",
+        quiet=False
+    )   
 
 # ---------- Page config ----------
 st.set_page_config(page_title="Real Estate Advisor", layout="wide")
