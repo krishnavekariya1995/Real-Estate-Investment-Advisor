@@ -14,8 +14,7 @@ if not os.path.exists("regression_model.pkl"):
     gdown.download(
         url,
         "regression_model.pkl",
-        quiet=False,
-        fuzzy=True
+        quiet=False
     )
 
 # ---------- Page config ----------
